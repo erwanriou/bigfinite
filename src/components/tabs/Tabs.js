@@ -4,23 +4,28 @@ import React, { useState } from "react"
 import Tab from "./Tab"
 
 // LOAD STYLING
-import "../../styles/Tabs.css"
+import { useStyles } from "../../styles/tabs.styles.js"
 
 const Tabs = () => {
   // HOOKS
+  const classes = useStyles()
   const [tab, setTab] = useState({ index: 1, content: "Content of tab 1" })
 
   // HANDLE FUNCTIONS
   const handleTabSelect = n => setTab({ index: n, content: `Content of tab ${n}` })
+  const handleStyles = n => {
+    const isSelect = tab.index === n + 1 && "#0095f2"
+    return { color: isSelect, borderColor: isSelect }
+  }
 
   // RENDERS
-  const TabNav = [...Array(3).keys()].map(n => <span onClick={() => handleTabSelect(n + 1)}>{`Tab${n + 1}`}</span>)
+  const TabNav = [...Array(3).keys()].map(n => (
+    <h3 className={classes.tabWrapper} style={handleStyles(n, "borderColor")} onClick={() => handleTabSelect(n + 1)}>{`Tab${n + 1}`}</h3>
+  ))
   return (
-    <div className="tabs-container">
-      <div className="tabs-nav">{TabNav}</div>
-      <div className="content">
-        <Tab content={tab.content} />
-      </div>
+    <div className={classes.tabContainer}>
+      <div className={classes.tabNav}>{TabNav}</div>
+      <Tab content={tab.content} classes={classes} />
     </div>
   )
 }
