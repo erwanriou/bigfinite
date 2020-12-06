@@ -1,0 +1,31 @@
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.tab-wrapper {
+    flex: auto;
+    cursor: pointer;
+    padding: 8px;
+    border-bottom: 2px solid #8A959E;
+}
+.tab-wrapper.active {
+    border-bottom: 2px solid #0095F2;
+}
+.tabs-nav {
+    display: flex;
+}
+.title {
+    color: #8A959E;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+.title.active {
+    color: #0095F2;
+}
+.content {
+    padding: 16px 8px;
+    font-size: 14px;
+    color: #4C5769;
+}
