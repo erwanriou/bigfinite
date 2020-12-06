@@ -18,7 +18,7 @@ const Tabs = () => {
 
   // RENDERS
   const TabNav = [...Array(3).keys()].map(n => (
-    <h3 className={classes.tabWrapper} style={handleStyles(n)} onClick={() => handleTabSelect(n)}>{`Tab${n + 1}`}</h3>
+    <h3 className={classes.tabWrapper} id={`tab${n + 1}`} key={n} style={handleStyles(n)} onClick={() => handleTabSelect(n)}>{`Tab${n + 1}`}</h3>
   ))
   return (
     <div className={classes.tabContainer}>
