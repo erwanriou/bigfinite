@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react"
 import { render } from "react-dom"
 
 // LOAD COMPONENTS
-import App from './components/App';
+import App from "./components/App"
 
 // DEFINE ROOT AND RENDER ELEMENT
 const rootElement = document.getElementById("root")
