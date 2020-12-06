@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "fixturesFolder": "src/test/fixtures",
+  "integrationFolder": "src/test/integration",
+  "pluginsFile": "src/test/plugins/index.js",
+  "screenshotsFolder": "src/test/screenshots",
+  "videosFolder": "src/test/videos",
+  "supportFile": "src/test/support/index.js",
+  "viewportWidth": 1500,
+  "viewportHeight": 900
+}

@@ -6,16 +6,19 @@
     "@testing-library/jest-dom": "5.11.6",
     "@testing-library/react": "11.2.2",
     "@testing-library/user-event": "12.5.0",
+    "cypress": "6.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-jss": "^10.5.0",
+    "react-jss": "10.5.0",
     "react-scripts": "4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "cypress open",
+    "test:ci": "cypress run"
   },
   "eslintConfig": {
     "extends": [
