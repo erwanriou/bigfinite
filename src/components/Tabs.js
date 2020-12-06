@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Tabs.css';
+import '../styles/Tabs.css';
 
 
 export class Tab extends Component {

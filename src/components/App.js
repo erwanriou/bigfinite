@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { Tab, Tabs } from './Tabs';
 
-function App() {
+const App = () => {
   return (
     <Tabs>
       <Tab title='Tab1'>Content of tab 1</Tab>
